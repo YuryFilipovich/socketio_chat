@@ -1,11 +1,14 @@
+import {io} from 'socket.io-client';
+
 let counter = 0;
 
-const socket = io({
+const socket = io('https://gilded-semifreddo-ea1757.netlify.app/?', {
     auth:       {
         serverOffset: 0
     },
     ackTimeout: 10000,
-    retries:    3
+    retries:    3,
+    path:       '/'
 });
 
 const form = document.getElementById('form');
