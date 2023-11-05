@@ -49,10 +49,10 @@ async function main() {
         res.sendFile(join(__dirname, 'index.html'));
     });
 
-    app.get('/client.js', (req, res) => {
-        res.type('text/javascript');
-        res.sendFile(__dirname + '/client.js');
-    });
+    // app.get('/client.js', (req, res) => {
+    //     res.type('text/javascript');
+    //     res.sendFile(__dirname + '/client.js');
+    // });
 
     io.on('connection', async (socket) => {
         socket.on('chat message', async (msg, clientOffset, callback) => {
