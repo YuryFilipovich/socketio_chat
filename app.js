@@ -51,7 +51,7 @@ async function main() {
 
     app.get('/client.js', (req, res) => {
         res.type('text/javascript');
-        res.sendFile(join(__dirname, 'client.js'));
+        res.sendFile(__dirname + '/client.js');
     });
 
     io.on('connection', async (socket) => {
